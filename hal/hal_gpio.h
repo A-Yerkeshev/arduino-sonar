@@ -14,7 +14,6 @@
 enum class hal_pin_level_t : uint8_t { LVL_LOW = 0, LVL_HIGH = 1 };
 enum class hal_pin_dir_t   : uint8_t { DIR_INPUT = 0, DIR_OUTPUT = 1 };
 
-sonar_status_t hal_init(void);
 uint32_t hal_micros(void);
 
 /**
@@ -30,9 +29,15 @@ void hal_delay_ms(uint32_t ms);
  */
 void hal_delay_us(uint32_t us);
 
-void            hal_pin_mode(uint8_t pin, hal_pin_dir_t mode);
-void            hal_pin_write(uint8_t pin, hal_pin_level_t value);
+sonar_status_t  hal_pin_mode(uint8_t pin, hal_pin_dir_t mode);
+sonar_status_t  hal_pin_write(uint8_t pin, hal_pin_level_t value);
 hal_pin_level_t hal_pin_read(uint8_t pin);
+
+/**
+ * Return a string describing the last argument error, or "" if none.
+ * Valid until the next hal_* call that sets an error.
+ */
+const char *hal_last_error(void);
 
 typedef struct {
     sonar_status_t status;

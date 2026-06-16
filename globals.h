@@ -13,6 +13,7 @@ typedef enum {
     SONAR_ERR_TIMEOUT      = 2,
     SONAR_ERR_OUT_OF_RANGE = 3,
     SONAR_ERR_HAL          = 4,
+    SONAR_ERR_ARG          = 5,
 } sonar_status_t;
 
 #define SONAR_MIN_RANGE_CM         2u

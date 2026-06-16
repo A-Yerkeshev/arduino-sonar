@@ -12,7 +12,6 @@
 /**
  * Initialize the SSD1306 OLED over hardware I2C.
  *
- * @pre  hal_init() called.
  * @return SONAR_OK on success, SONAR_ERR_HAL if the display does not respond.
  */
 sonar_status_t hal_oled_init(void);
