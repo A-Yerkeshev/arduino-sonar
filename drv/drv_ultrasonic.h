@@ -10,13 +10,6 @@
 
 #include "../hal/hal_gpio.h"
 
-/**
- * Initialize the ultrasonic ranger (configure SIG pin direction).
- *
- * @return SONAR_OK always — pin configuration on ATmega328P cannot fail.
- */
-sonar_status_t drv_ultrasonic_init(void);
-
 typedef struct {
     sonar_status_t status;
     uint16_t       dist_cm;

@@ -42,7 +42,6 @@ static void test_above_max_boundary(void) {
 }
 
 int main(void) {
-    drv_ultrasonic_init();
     test_timeout();
     test_below_min_boundary();
     test_min_boundary();
