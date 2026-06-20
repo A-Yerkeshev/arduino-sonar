@@ -22,7 +22,7 @@ void drv_oled_show_error(sonar_status_t err) {
     const char *line2;
     if      (err == SONAR_ERR_TIMEOUT)      { line1 = "No target"; line2 = "detected"; }
     else if (err == SONAR_ERR_OUT_OF_RANGE) { line1 = "Target";    line2 = "outside range"; }
-    else                                    {                       line2 = "unknown error"; }
+    else                                    {                       line2 = "Error"; }
     hal_oled_clear();
     hal_oled_set_cursor(0, 1);
     hal_oled_print_str(line1);
