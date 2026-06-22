@@ -1,6 +1,6 @@
 #include <cassert>
 #include "mock_hal_gpio.h"
-#include "../app/app_sonar.h"
+#include "../src/app/app_sonar.h"
 
 static void test_propagates_timeout(void) {
     mock_hal_pulse_in(0);

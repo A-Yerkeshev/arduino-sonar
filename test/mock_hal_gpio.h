@@ -8,7 +8,7 @@
 #ifndef MOCK_HAL_GPIO_H
 #define MOCK_HAL_GPIO_H
 
-#include "../hal/hal_gpio.h"
+#include "../src/hal/hal_gpio.h"
 
 void mock_hal_pulse_in(uint32_t duration_us);
 

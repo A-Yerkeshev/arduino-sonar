@@ -6,8 +6,10 @@ static U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(U8X8_PIN_NONE);
 
 sonar_status_t hal_oled_init(void) {
     sonar_status_t status = SONAR_ERR_GENERIC;
+    u8x8.setBusClock(100000);
     if (u8x8.begin()) {
         u8x8.setFlipMode(1);
+        u8x8.setFont(u8x8_font_chroma48medium8_r);
         status = SONAR_OK;
     } else {
         status = SONAR_ERR_HAL;

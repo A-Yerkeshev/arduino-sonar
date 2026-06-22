@@ -1,6 +1,6 @@
 #include <cassert>
 #include "mock_hal_gpio.h"
-#include "../drv/drv_ultrasonic.h"
+#include "../src/drv/drv_ultrasonic.h"
 
 static void test_timeout(void) {
     mock_hal_pulse_in(0);
